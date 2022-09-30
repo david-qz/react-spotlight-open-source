@@ -31,9 +31,9 @@ export default function Table() {
   });
 
   return (
-    <div className='self-center w-full px-5'>
+    <div className='self-center w-full h-96 px-5'>
       <RTable
-        autoHeight
+        fillHeight
         data={users}
         sortColumn={sortData.column}
         sortType={sortData.type}
