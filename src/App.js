@@ -2,10 +2,11 @@ import { Route, Switch } from 'react-router-dom';
 import GDPChart from './components/Chart';
 import Header from './components/Header';
 import Table from './components/Table';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='grid grid-rows-page-layout'>
+    <div className='min-h-screen grid grid-rows-page-layout'>
       <Header />
       <Switch>
         <Route path="/table">
@@ -21,6 +22,7 @@ function App() {
           </div>
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
