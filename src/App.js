@@ -1,14 +1,17 @@
-import { Link, Route, Switch } from 'react-router-dom';
-import './App.css';
+import { NavLink, Route, Switch } from 'react-router-dom';
 import GDPChart from './components/Chart/Chart';
 import Table from './components/Table/Table';
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <Link to="/table">Table</Link>
-        <Link to="/charts">Charts</Link>
+    <div className=''>
+      <nav className='p-2 flex justify-center gap-1'>
+        <NavLink to="/table" className='bg-blue-300 px-2 py-1 rounded [&.active]:bg-blue-400'>
+          Table
+        </NavLink>
+        <NavLink to="/charts" className='bg-blue-300 px-2 py-1 rounded [&.active]:bg-blue-400'>
+          Charts
+        </NavLink>
       </nav>
       <Switch>
         <Route path="/table">
