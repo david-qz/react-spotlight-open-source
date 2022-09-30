@@ -4,7 +4,7 @@ import Table from './components/Table/Table';
 
 function App() {
   return (
-    <div className=''>
+    <div className='grid grid-rows-page-layout'>
       <nav className='p-2 flex justify-center gap-1'>
         <NavLink to="/table" className='bg-blue-300 px-2 py-1 rounded [&.active]:bg-blue-400'>
           Table
@@ -15,12 +15,16 @@ function App() {
       </nav>
       <Switch>
         <Route path="/table">
-          <h1>Table Library</h1>
-          <Table />
+          <div className='flex flex-col'>
+            <h1 className='m-3 text-3xl font-bold'>Table Library</h1>
+            <Table />
+          </div>
         </Route>
         <Route path="/charts">
-          <h1>Chart Library</h1>
-          <GDPChart countries={['USA', 'CHN', 'IND', 'JPN', 'DEU']} />
+          <div className='flex flex-col'>
+            <h1 className='m-3 text-3xl font-bold'>Chart Library</h1>
+            <GDPChart countries={['USA', 'CHN', 'IND', 'JPN', 'DEU']} />
+          </div>
         </Route>
       </Switch>
     </div>
