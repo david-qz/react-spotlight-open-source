@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 async function fetchData(countries) {
   const countryDataArray = await Promise.all(
     countries.map(iso3 => {
-      return fetch(`http://api.worldbank.org/v2/countries/${iso3}/indicators/NY.GDP.MKTP.CD?per_page=100&format=json`)
+      return fetch(`https://api.worldbank.org/v2/countries/${iso3}/indicators/NY.GDP.MKTP.CD?per_page=100&format=json`)
         .then(response => response.json())
         .then(data => data[1]);
     })
