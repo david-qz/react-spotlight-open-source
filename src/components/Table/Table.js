@@ -31,37 +31,39 @@ export default function Table() {
   });
 
   return (
-    <RTable
-      autoHeight
-      data={users}
-      sortColumn={sortData.column}
-      sortType={sortData.type}
-      onSortColumn={handleSort}
-    >
-      <Column sortable width={40}>
-        <HeaderCell>ID</HeaderCell>
-        <Cell dataKey="id" />
-      </Column>
-      <Column width={70}>
-        <HeaderCell>Avatar</HeaderCell>
-        <ImageCell dataKey="image" />
-      </Column>
-      <Column sortable flexGrow={1}>
-        <HeaderCell>Last Name</HeaderCell>
-        <Cell dataKey="last_name" />
-      </Column>
-      <Column sortable flexGrow={1}>
-        <HeaderCell>First Name</HeaderCell>
-        <Cell dataKey="first_name" />
-      </Column>
-      <Column sortable flexGrow={1}>
-        <HeaderCell>Email</HeaderCell>
-        <Cell dataKey="email" />
-      </Column>
-      <Column sortable flexGrow={1}>
-        <HeaderCell>Favorite Color</HeaderCell>
-        <Cell dataKey="favorite_color" />
-      </Column>
-    </RTable>
+    <div className='self-center w-full px-5'>
+      <RTable
+        autoHeight
+        data={users}
+        sortColumn={sortData.column}
+        sortType={sortData.type}
+        onSortColumn={handleSort}
+      >
+        <Column sortable width={50}>
+          <HeaderCell>ID</HeaderCell>
+          <Cell dataKey="id" />
+        </Column>
+        <Column width={70}>
+          <HeaderCell>Avatar</HeaderCell>
+          <ImageCell dataKey="image" />
+        </Column>
+        <Column sortable flexGrow={1}>
+          <HeaderCell>Last Name</HeaderCell>
+          <Cell dataKey="last_name" />
+        </Column>
+        <Column sortable flexGrow={1}>
+          <HeaderCell>First Name</HeaderCell>
+          <Cell dataKey="first_name" />
+        </Column>
+        <Column sortable flexGrow={1}>
+          <HeaderCell>Email</HeaderCell>
+          <Cell dataKey="email" />
+        </Column>
+        <Column sortable flexGrow={1}>
+          <HeaderCell>Favorite Color</HeaderCell>
+          <Cell dataKey="favorite_color" />
+        </Column>
+      </RTable>
+    </div>
   );
 }
