@@ -10,7 +10,7 @@ export default function Table() {
 
   const ImageCell = ({ rowData, dataKey, ...rest }) => {
     return <Cell {...rest}>
-      <img src={rowData[dataKey]} width="50" />
+      <img className='w-full h-full object-contain' src={rowData[dataKey]} />
     </Cell>;
   };
 
