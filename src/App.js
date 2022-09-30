@@ -1,5 +1,6 @@
 import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
+import GDPChart from './components/Chart/Chart';
 import Table from './components/Table/Table';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         </Route>
         <Route path="/charts">
           <h1>Chart Library</h1>
+          <GDPChart countries={['USA', 'CHN', 'IND', 'JPN', 'DEU']} />
         </Route>
       </Switch>
     </div>
