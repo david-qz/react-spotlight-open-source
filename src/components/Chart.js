@@ -14,7 +14,7 @@ export default function GDPChart({ countries }) {
     <LineChart margin={{ top: 10, right: 30, left: 65, bottom: 30 }} data={data}>
       {
         countries.map((country, i) => {
-          return <Line key={country} type="monotone" dot={false} dataKey={country} stroke={palette[i % palette.length]} />;
+          return <Line key={country} type="monotone" dot={false} dataKey={country} stroke={palette[i % palette.length]} isAnimationActive={false} />;
         })
       }
       <XAxis type="number" domain={['dataMin', 'dataMax']} dataKey="date">
