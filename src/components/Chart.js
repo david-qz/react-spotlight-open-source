@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Legend, Tooltip, Label, ResponsiveContainer } from 'recharts';
-import useCountriesGDP from '../../hooks/UseCountriesGDP';
+import useCountriesGDP from '../hooks/UseCountriesGDP';
 
 const palette = ['#8884d8', '#84d888', '#d88488', '#fcb103', '#8d41d9'];
 

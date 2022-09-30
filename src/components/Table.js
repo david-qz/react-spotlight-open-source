@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Table as RTable, Column, HeaderCell, Cell } from 'rsuite-table';
-import allUserData from '../../users.json';
+import allUserData from '../users.json';
 import 'rsuite-table/dist/css/rsuite-table.css';
 
 const userData = allUserData.slice(0, 100);

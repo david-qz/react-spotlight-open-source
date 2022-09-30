@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
-import GDPChart from './components/Chart/Chart';
-import Header from './components/Header/Header';
-import Table from './components/Table/Table';
+import GDPChart from './components/Chart';
+import Header from './components/Header';
+import Table from './components/Table';
 
 function App() {
   return (
