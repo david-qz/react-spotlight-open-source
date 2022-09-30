@@ -5,11 +5,11 @@ import Table from './components/Table/Table';
 function App() {
   return (
     <div className='grid grid-rows-page-layout'>
-      <nav className='p-2 flex justify-center gap-1'>
-        <NavLink to="/table" className='bg-blue-300 px-2 py-1 rounded [&.active]:bg-blue-400'>
+      <nav className='p-2 flex justify-end gap-1 bg-slate-600 shadow-xl'>
+        <NavLink to="/table" className='shadow-lg bg-cyan-800 text-white px-2 py-1 rounded [&.active]:bg-cyan-700'>
           Table
         </NavLink>
-        <NavLink to="/charts" className='bg-blue-300 px-2 py-1 rounded [&.active]:bg-blue-400'>
+        <NavLink to="/charts" className='shadow-lg bg-cyan-800 text-white px-2 py-1 rounded [&.active]:bg-cyan-700'>
           Charts
         </NavLink>
       </nav>
