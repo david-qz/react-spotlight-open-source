@@ -16,13 +16,13 @@ function App() {
       <Switch>
         <Route path="/table">
           <div className='flex flex-col'>
-            <h1 className='m-3 text-3xl font-bold'>Table Library</h1>
+            <h1 className='m-3 text-3xl font-bold'>React Suite Table Example</h1>
             <Table />
           </div>
         </Route>
         <Route path="/charts">
           <div className='flex flex-col'>
-            <h1 className='m-3 text-3xl font-bold'>Chart Library</h1>
+            <h1 className='m-3 text-3xl font-bold'>Recharts Example</h1>
             <GDPChart countries={['USA', 'CHN', 'IND', 'JPN', 'DEU']} />
           </div>
         </Route>
