@@ -1,21 +1,31 @@
-import { Link, Route, Switch } from 'react-router-dom';
-import './App.css';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import GDPChart from './components/Chart';
+import Header from './components/Header';
+import Table from './components/Table';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <Link to="/table">Table</Link>
-        <Link to="/charts">Charts</Link>
-      </nav>
+    <div className='min-h-screen grid grid-rows-page-layout'>
+      <Header />
       <Switch>
         <Route path="/table">
-          <h1>Table Libary</h1>
+          <div className='flex flex-col'>
+            <h1 className='m-3 text-3xl font-bold'>React Suite Table</h1>
+            <Table />
+          </div>
         </Route>
         <Route path="/charts">
-          <h1>Chart Library</h1>
+          <div className='flex flex-col'>
+            <h1 className='m-3 text-3xl font-bold'>Recharts</h1>
+            <GDPChart countries={['USA', 'CHN', 'IND', 'JPN', 'DEU']} />
+          </div>
+        </Route>
+        <Route path="/">
+          <Redirect to="/table" />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
